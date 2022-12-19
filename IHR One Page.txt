@@ -1,0 +1,8 @@
+The most hated excercise, besides leg day, is running. Why? Fresh air, jam out to music, chat with friends; just of the few benefits of running.
+Oh, yeah, and it's really good for you! The goal of I Hate Running is to introduce more people to the wonderful world of running.
+
+It all starts with a goal. A finish line. Find a race that is in your area in the near future. Sign up for it and add it to your account.
+That's the hard part. Now all you have to do is run. Throw on some sneakers and run around the block. Walk around the block.
+Keep track of your progress so at race day, you can look back and see just how far you've come. Then sign up for another race!
+
+IHR uses React/Bootstrap on the front end, Spring Web using Java, and PostgreSQL on the back end.
