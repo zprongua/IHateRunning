@@ -1,0 +1,29 @@
+{
+  "iHateRunningApp": {
+    "run": {
+      "home": {
+        "title": "Runs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Run",
+        "createOrEditLabel": "Create or edit a Run",
+        "notFound": "No Runs found"
+      },
+      "created": "A new Run is created with identifier {{ param }}",
+      "updated": "A Run is updated with identifier {{ param }}",
+      "deleted": "A Run is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Run {{ id }}?"
+      },
+      "detail": {
+        "title": "Run"
+      },
+      "id": "ID",
+      "runName": "Run Name",
+      "runDate": "Run Date",
+      "distance": "Distance",
+      "time": "Time",
+      "pace": "Pace",
+      "user": "User"
+    }
+  }
+}

@@ -1,81 +1,41 @@
-entity Project {
-  name String
+entity Race {
+  raceName String required
+  raceDate LocalDate
+  raceDistance Distance
 }
 
-entity Label {
-  label String required minlength(3)
+entity Run {
+  runName String required
+  runDate LocalDate required
+  distance Double required
+  time Double required
+  pace Double
 }
 
 application {
   config {
-    baseName bugzee,
-    packageName zipcode.bugzee,
+    authenticationType jwt,
+    baseName IHateRunning,
+    packageName com.ihaterunning,
     applicationType monolith,
     prodDatabaseType postgresql,
+    clientFramework react
+    
   }
   entities *
 }
 
-entity Ticket {
-  title String required
-  description String
-  dueDate LocalDate
-  date ZonedDateTime
-  status Status
-  type Type
-  priority Priority
-}
-
-entity Attachment {
-  name String required minlength(3)
-  file Blob
-}
-
-relationship ManyToMany {
-  Ticket{label(label)} to Label{ticket}
+enum Distance {
+    FIVEK("5K"), 
+    TENK("10K"), 
+    HALF("Half marathon"), 
+    MARATHON("Marathon"), 
+    OTHER("Other")
 }
 
 relationship ManyToOne {
-  Ticket{project(name)} to Project
-  Ticket{reportedBy(login)} to User
-  Comment{login} to User
+  Run{user(login)} to User
+  Race{user(login)} to User
 }
 
-relationship OneToMany {
-  Comment{parent} to Comment{child}
-  Ticket to Attachment 
-}
-
-enum Status {
-  OPEN("Open")
-  WAITING_FOR_RESPONSE("Waiting for Customer Response")
-  CLOSED("Closed")
-  DUPLICATE("Duplicate")
-  IN_PROGRESS("In Progress")
-  REOPENED("Reopened")
-  CANNOT_REPRODUCE("Cannot Reproduce")
-  SOLVED("Solved")
-  WONT_IMPLEMENT("Won't Implement")
-  VERIFIED("Verified")
-  
-}
-
-enum Type {
-  BUG("Bug"),
-  FEATURE("Feature")
-}
-
-enum Priority {
-  HIGHEST("Highest")
-  HIGHER("Higher")
-  HIGH("High")
-  NORMAL("Normal")
-  LOW("Low")
-  LOWER("Lower")
-  LOWERST("Lowest")
-}
-
-entity Comment {
-  date ZonedDateTime
-  text String
-}
+service * with serviceClass

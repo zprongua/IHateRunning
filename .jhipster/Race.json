@@ -1,0 +1,37 @@
+{
+  "applications": ["IHateRunning"],
+  "changelogDate": "20221220203608",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "race",
+  "fields": [
+    {
+      "fieldName": "raceName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "raceDate",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "raceDistance",
+      "fieldType": "Distance",
+      "fieldValues": "FIVEK (5K),TENK (10K),HALF (Half marathon),MARATHON (Marathon),OTHER (Other)"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Race",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "login",
+      "otherEntityName": "user",
+      "relationshipName": "user",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

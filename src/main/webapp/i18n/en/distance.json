@@ -1,0 +1,12 @@
+{
+  "iHateRunningApp": {
+    "Distance": {
+      "null": "",
+      "FIVEK": "5K",
+      "TENK": "10K",
+      "HALF": "Half marathon",
+      "MARATHON": "Marathon",
+      "OTHER": "Other"
+    }
+  }
+}

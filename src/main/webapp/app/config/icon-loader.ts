@@ -13,12 +13,14 @@ import { faHome } from '@fortawesome/free-solid-svg-icons/faHome';
 import { faList } from '@fortawesome/free-solid-svg-icons/faList';
 import { faLock } from '@fortawesome/free-solid-svg-icons/faLock';
 import { faPencilAlt } from '@fortawesome/free-solid-svg-icons/faPencilAlt';
+import { faPersonRunning } from '@fortawesome/free-solid-svg-icons/faPersonRunning';
 import { faPlus } from '@fortawesome/free-solid-svg-icons/faPlus';
 import { faSave } from '@fortawesome/free-solid-svg-icons/faSave';
 import { faSearch } from '@fortawesome/free-solid-svg-icons/faSearch';
 import { faSort } from '@fortawesome/free-solid-svg-icons/faSort';
 import { faSync } from '@fortawesome/free-solid-svg-icons/faSync';
 import { faRoad } from '@fortawesome/free-solid-svg-icons/faRoad';
+import { faRoute } from '@fortawesome/free-solid-svg-icons/faRoute';
 import { faSignInAlt } from '@fortawesome/free-solid-svg-icons/faSignInAlt';
 import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons/faSignOutAlt';
 import { faTachometerAlt } from '@fortawesome/free-solid-svg-icons/faTachometerAlt';
@@ -27,6 +29,7 @@ import { faThList } from '@fortawesome/free-solid-svg-icons/faThList';
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons/faTimesCircle';
 import { faTrash } from '@fortawesome/free-solid-svg-icons/faTrash';
 import { faUser } from '@fortawesome/free-solid-svg-icons/faUser';
+import { faUserAstronaut } from '@fortawesome/free-solid-svg-icons/faUserAstronaut';
 import { faUserPlus } from '@fortawesome/free-solid-svg-icons/faUserPlus';
 import { faUsers } from '@fortawesome/free-solid-svg-icons/faUsers';
 import { faUsersCog } from '@fortawesome/free-solid-svg-icons/faUsersCog';
@@ -51,8 +54,10 @@ export const loadIcons = () => {
     faList,
     faLock,
     faPencilAlt,
+    faPersonRunning,
     faPlus,
     faRoad,
+    faRoute,
     faSave,
     faSignInAlt,
     faSignOutAlt,
@@ -65,6 +70,7 @@ export const loadIcons = () => {
     faTimesCircle,
     faTrash,
     faUser,
+    faUserAstronaut,
     faUserPlus,
     faUsers,
     faUsersCog,

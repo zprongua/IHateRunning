@@ -7,17 +7,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const BrandIcon = props => (
   <div {...props} className="brand-icon">
-    <img src="content/images/logo-jhipster.png" alt="Logo" />
+    <img src="content/images/IHR Logo.png" alt="Logo" />
   </div>
 );
 
 export const Brand = () => (
   <NavbarBrand tag={Link} to="/" className="brand-logo">
     <BrandIcon />
-    <span className="brand-title">
+    {/* <span className="brand-title">
       <Translate contentKey="global.title">IHateRunning</Translate>
-    </span>
-    <span className="navbar-version">{VERSION}</span>
+    </span> */}
   </NavbarBrand>
 );
 
@@ -28,6 +27,24 @@ export const Home = () => (
       <span>
         <Translate contentKey="global.menu.home">Home</Translate>
       </span>
+    </NavLink>
+  </NavItem>
+);
+
+export const Races = () => (
+  <NavItem>
+    <NavLink tag={Link} to="/race" className="d-flex align-items-center">
+      <FontAwesomeIcon icon="route" />
+      <span>My Races</span>
+    </NavLink>
+  </NavItem>
+);
+
+export const Runs = () => (
+  <NavItem>
+    <NavLink tag={Link} to="/run" className="d-flex align-items-center">
+      <FontAwesomeIcon icon="person-running" />
+      <span>My Runs</span>
     </NavLink>
   </NavItem>
 );
