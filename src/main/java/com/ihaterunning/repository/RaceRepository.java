@@ -14,7 +14,7 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface RaceRepository extends JpaRepository<Race, Long> {
-    @Query("select race from Race race where race.user.login = ?#{principal.username}")
+    @Query("select race from Race race where race.user.login = ?#{principal.username} ORDER BY RACE_DATE ASC")
     List<Race> findByUserIsCurrentUser();
 
     default Optional<Race> findOneWithEagerRelationships(Long id) {

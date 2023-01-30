@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Button, Table } from 'reactstrap';
+import { Button, Table, Progress } from 'reactstrap';
 import { Translate, TextFormat } from 'react-jhipster';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
@@ -27,21 +27,20 @@ export const Run = () => {
     dispatch(getEntities({}));
   };
 
+  const runTotal = runList.reduce((totalMiles, run) => totalMiles + run.distance, 0);
+
   return (
     <div>
-      <h2 id="run-heading" data-cy="RunHeading">
-        <Translate contentKey="iHateRunningApp.run.home.title">Runs</Translate>
+      <h4 id="run-heading" data-cy="RunHeading">
+        {runTotal} of 238.86 (k miles to the moon)
+        <Progress color="success" max={238.86} value={runTotal} />
         <div className="d-flex justify-content-end">
           {/* <Button className="me-2" color="info" onClick={handleSyncList} disabled={loading}>
             <FontAwesomeIcon icon="sync" spin={loading} />{' '}
             <Translate contentKey="iHateRunningApp.run.home.refreshListLabel">Refresh List</Translate>
           </Button> */}
-          <Link to="/run/new" className="btn btn-primary jh-create-entity" id="jh-create-entity" data-cy="entityCreateButton">
-            <FontAwesomeIcon icon="plus" />
-            &nbsp; Run
-          </Link>
         </div>
-      </h2>
+      </h4>
       <div className="table-responsive">
         {runList && runList.length > 0 ? (
           <Table responsive>
@@ -65,10 +64,15 @@ export const Run = () => {
                 <th>
                   <Translate contentKey="iHateRunningApp.run.pace">Pace</Translate>
                 </th>
+                <th className="d-flex justify-content-end">
+                  <Link to="/run/new" className="btn btn-dark jh-create-entity btn-sm" id="jh-create-entity" data-cy="entityCreateButton">
+                    <FontAwesomeIcon icon="plus" />
+                    &nbsp; Run
+                  </Link>
+                </th>
                 {/* <th>
                   <Translate contentKey="iHateRunningApp.run.user">User</Translate>
                 </th> */}
-                <th />
               </tr>
             </thead>
             <tbody>
@@ -85,9 +89,9 @@ export const Run = () => {
                     </Button>
                   </td>
                   <td>{run.runDate ? <TextFormat type="date" value={run.runDate} format={APP_LOCAL_DATE_FORMAT} /> : null}</td>
-                  <td>{run.distance}</td>
+                  <td>{run.distance} mi</td>
                   <td>{run.time}</td>
-                  <td>{run.pace}</td>
+                  <td>{run.pace} min/mile</td>
                   {/* <td>{run.user ? run.user.login : ''}</td> */}
                   <td className="text-end">
                     <div className="btn-group flex-btn-group-container">

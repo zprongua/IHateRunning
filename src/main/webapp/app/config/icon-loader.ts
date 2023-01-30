@@ -26,6 +26,7 @@ import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons/faSignOutAlt';
 import { faTachometerAlt } from '@fortawesome/free-solid-svg-icons/faTachometerAlt';
 import { faTasks } from '@fortawesome/free-solid-svg-icons/faTasks';
 import { faThList } from '@fortawesome/free-solid-svg-icons/faThList';
+import { faThumbsUp } from '@fortawesome/free-solid-svg-icons/faThumbsUp';
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons/faTimesCircle';
 import { faTrash } from '@fortawesome/free-solid-svg-icons/faTrash';
 import { faUser } from '@fortawesome/free-solid-svg-icons/faUser';
@@ -67,6 +68,7 @@ export const loadIcons = () => {
     faTachometerAlt,
     faTasks,
     faThList,
+    faThumbsUp,
     faTimesCircle,
     faTrash,
     faUser,

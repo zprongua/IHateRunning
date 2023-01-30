@@ -14,7 +14,7 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface RunRepository extends JpaRepository<Run, Long> {
-    @Query("select run from Run run where run.user.login = ?#{principal.username}")
+    @Query("select run from Run run where run.user.login = ?#{principal.username} ORDER BY RUN_DATE DESC")
     List<Run> findByUserIsCurrentUser();
 
     default Optional<Run> findOneWithEagerRelationships(Long id) {
