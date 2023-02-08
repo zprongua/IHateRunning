@@ -1,4 +1,4 @@
-package com.ihaterunning.service.mapper;
+package com.ihaterunning.web.service.mapper;
 
 import com.ihaterunning.domain.Authority;
 import com.ihaterunning.domain.User;

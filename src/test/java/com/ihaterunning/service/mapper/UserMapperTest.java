@@ -5,6 +5,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import com.ihaterunning.domain.User;
 import com.ihaterunning.service.dto.AdminUserDTO;
 import com.ihaterunning.service.dto.UserDTO;
+import com.ihaterunning.web.service.mapper.UserMapper;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
